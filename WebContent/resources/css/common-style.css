@@ -1,0 +1,64 @@
+@charset "ISO-8859-1";
+
+h1
+{
+	font-family: "Times New Roman";
+  	font-size: 40px;
+}
+
+h5
+{
+	font-family: "Courier New";
+ 	 font-size: 15px;
+ 	 font-style: italic;
+}
+
+.headerStyle
+{
+ 	 font-family: "Times New Roman";
+ 	 font-size: 40px;
+}
+
+.contentStyle
+{
+ 	font-family: "Copperplate";
+ 	 font-size: 20px;
+}
+
+.footerStyle
+{
+ 	 font-family: "Courier New";
+ 	 font-size: 15px;
+ 	 font-style: italic;
+}
+
+.tableStyle
+{
+	font-family: "Courier New";
+ 	font-size: 15px;
+ 	font-style: italic;
+}
+
+.tableHeaderStyle
+{
+	font-family: "Courier New";
+ 	font-size: 15px;
+ 	font-style: normal;
+ 	font-weight: bold;
+}
+
+.tableOddRowStyle
+{
+	font-family: "Courier New";
+ 	font-size: 15px;
+ 	font-style: normal;
+ 	background-color: teal;
+}
+
+.tableEvenRowStyle
+{
+	font-family: "Courier New";
+ 	font-size: 15px;
+ 	font-style: normal;
+ 	background-color: green;
+}

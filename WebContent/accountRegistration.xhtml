@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+	
+	<!-- Page Body -->
+	<h:body>
+		<ui:composition template="/layouts/commonLayout.xhtml">
+		
+			<!-- Defining Page Title's Content -->
+			<ui:define name="title">
+			 	Register New Account
+			</ui:define>
+			
+			<!-- Defining Page Content's Content -->
+			<ui:define name="content">
+				<div align="center" class="contentStyle">
+					<!-- Creating Account Creation Form -->
+					<h:form>
+						<tr>
+								<td><h:outputText value="Username: " /></td>
+								<td><h:inputText id="username" value="#{user.username}" />
+								</td>
+								<td><h:message for="username" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<td><h:outputText value="Password: " /></td>
+								<td><h:inputText id="password" value="#{user.password}" />
+								</td>
+								<td><h:message for="password" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<td><h:outputText value="First Name: " /></td>
+								<td><h:inputText id="firstName" value="#{user.firstName}" />
+								</td>
+								<td><h:message for="firstName" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<td><h:outputText value="Last Name: " /></td>
+								<td><h:inputText id="lastName" value="#{user.lastName}" />
+								</td>
+								<td><h:message for="lastName" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<td><h:outputText value="Email: " /></td>
+								<td><h:inputText id="email" value="#{user.email}" /></td>
+								<td><h:message for="email" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<td><h:outputText value="Birthdate: " /></td>
+								<td><h:inputText id="phoneNumber"
+										value="#{user.birthdate}" /></td>
+								<td><h:message for="birthdate" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+						
+						<td><h:commandButton value="Register"
+										action="#{accountController.register(user)}" /></td>
+					</tr></h:form>
+				</div>
+			</ui:define>
+		</ui:composition>
+	</h:body> 
+</html>

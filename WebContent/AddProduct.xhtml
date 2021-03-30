@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+ <style>
+
+</style>
+</h:head>
+<h:body>
+<ui:composition template="/layouts/commonLayout.xhtml">
+
+<ui:define name="content">
+			<div align="center" class="contentStyle">
+				<f:view>
+					<h:form>
+						
+							<tr>
+								<h4>Book Name:</h4>
+								<td><h:inputText id="name" value="#{products.bookName}" />
+								</td>
+								<td><h:message for="name" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<h4>Book Author:</h4>
+								<td><h:inputText id="author" value="#{products.bookAuthor}" /></td>
+								<td><h:message for="author" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<h4>Book Description:</h4>
+								<td><h:inputText id="short_description" value="#{products.bookDescription}" /></td>
+								<td><h:message for="short_description" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<h4>Book Genre:</h4>
+								<td><h:inputText id="genre" value="#{products.bookGenre}" /></td>
+								<td><h:message for="genre" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<h4>Book Price:</h4>
+								<td><h:inputText id="price" value="#{products.price}" />
+								</td>
+								<td><h:message for="price" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<h4>Book Quantity:</h4>
+								<td><h:inputText id="quantity" value="#{products.quantity}" /></td>
+								<td><h:message for="quantity" style="color:red" /></td>
+							</tr>
+							<br/>
+							<tr>
+								<td><h:commandButton value="Add Product"
+										action="#{productController.addProduct(products)}" class="button"/>
+								</td>
+							</tr>
+						
+					</h:form>
+				</f:view>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body> 
+</html>

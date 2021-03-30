@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:body> 
+ 	<ui:composition template="/layouts/commonLayout.xhtml">
+ 		<ui:define name="content">
+ 			<div align="center">
+ 				<!-- Edit specific product -->
+ 				<h:form>
+ 					<table>
+ 						<tr>
+ 							<td><h:outputText value= "Book Name: " /></td>
+ 							<td><h:inputText id="name" value="#{product.bookName}" style="width:100px;height:50px" /></td>
+ 							<td><h:message for="name" style="color:red" /></td>
+ 						</tr>
+ 						<tr>
+ 							<td><h:outputText value="Author: " /></td>
+ 							<td><h:inputText id="author" value="#{product.bookAuthor}" style="width:100px;height:50px" /></td>
+ 							<td><h:message for="author" style="color:red" /></td>
+ 						</tr>
+ 						<tr>
+ 							<td><h:outputText value="Description: " /></td>
+ 							<td><h:inputText id="short_description" value="#{product.bookDescription}" style="width:100px;height:50px"/></td>
+ 							<td><h:message for="short_description" style="color:red" /></td>
+ 						</tr>
+ 						<tr>
+ 							<td><h:outputText value="Genre: " /></td>
+ 							<td><h:inputText id="genre" value="#{product.bookGenre}" style="width:100px;height:50px"/></td>
+ 							<td><h:message for="genre" style="color:red" /></td>
+ 						</tr>
+ 						<tr>
+ 							<td><h:outputText value="Price: " /></td>
+ 							<td><h:inputText id="price" value="#{product.price}" style="width:100px;height:50px"/></td>
+ 							<td><h:message for="price" style="color:red" /></td>
+ 						</tr>
+ 				
+ 						<tr>
+ 							<td><h:outputText value="Quantity: " /></td>
+ 							<td><h:inputText id="quantity" value="#{product.quantity}" style="width:100px;height:50px"/></td>
+ 							<td><h:message for="quantity" style="color:red" /></td>
+ 						</tr>
+ 						<tr>
+ 							<td>
+ 								<h:commandButton value="Save" action="#{productController.updateProduct(product)}" style="width:100px;height:50px" />
+ 							</td>
+ 						</tr>
+ 					</table>
+ 				</h:form>
+ 			</div>
+ 		</ui:define>
+ 	</ui:composition>
+ </h:body> 
+ </html>
