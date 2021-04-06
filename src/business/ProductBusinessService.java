@@ -20,10 +20,17 @@ public class ProductBusinessService {
 	// non default constructor
 	public ProductBusinessService() 
 	{
-		if(!findAllProducts())
+		if(findAllProducts() == null)
 		{
 			Products p1 = new Products(0, "Romeo and Juliet", (float) 9.99, "Novel", "Shakespeare", "Love and death", 100);
 			products.add(p1);
+		}
+		else
+		{
+			Database db = new Database();
+			ProductDataService pds = new ProductDataService(db);
+			products.removeAll(products);
+			products.addAll(pds.findAllProducts());
 		}
 	}
 		
@@ -56,21 +63,24 @@ public class ProductBusinessService {
 		}
 	}
 	
-	private boolean findAllProducts()
+	public List<Products> findAllProducts()
 	{
 		Database db = new Database();
 		ProductDataService pds = new ProductDataService(db);
+		List<Products> products = new ArrayList<Products>();
 		
 		if(pds.findAllProducts() != null)
 		{
-			products.addAll(pds.findAllProducts());
-			return true;
+			products = pds.findAllProducts();
 		}
 		else
 		{
-			return false;
+			products = null;
 		}
-	}/**
+		return products;
+	
+	}
+	/**
 	 * Find specific product from database
 	 * @param id
 	 * @return
