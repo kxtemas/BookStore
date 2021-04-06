@@ -1,11 +1,13 @@
 package Data;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import beans.Database;
 import beans.User;
@@ -101,5 +103,37 @@ public class UserDataService {
 			e.printStackTrace();
 			return false;
 		}
+	}
+	//helps user rest service
+	public List<User> findAllUsers() 
+	{
+		Connection conn = null;
+
+		List<User> users = new ArrayList<User>();
+		try {
+			conn = DriverManager.getConnection(connection.getUrl(), connection.getUser(), connection.getPass());
+			String sql = "SELECT * FROM clc235.users";
+			
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+
+			while (rs.next()) {
+				User u1 = new User();
+				u1.setUsername(rs.getString("username"));
+				u1.setPassword(rs.getString("password"));
+				u1.setFirstName(rs.getString("firstname"));
+				u1.setLastName(rs.getString("password"));
+				u1.setEmail(rs.getString("email"));
+				u1.setBirthdate(rs.getString("birthdate"));
+				users.add(u1);
+				
+			}
+			rs.close();
+			conn.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		return users;
 	}
 }

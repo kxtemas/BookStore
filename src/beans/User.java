@@ -1,20 +1,13 @@
 package beans;
-import java.io.BufferedWriter; 
-import java.io.File;  
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.sql.Date;
-import java.util.Scanner;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-import javax.faces.context.FacesContext;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @ManagedBean
 @ViewScoped
+@XmlRootElement(name="User")
 public class User {
 	// Setting user first name with constraints
 	@NotNull(message = "Please enter a first name")
