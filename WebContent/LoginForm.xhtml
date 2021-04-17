@@ -20,19 +20,23 @@
 				<h:form>
 							<tr>
 								<td><h:outputText value="Username: " /></td>
-								<td><h:inputText id="username" value="#{user.username}" />
+								<br/>
+								<td><h:inputText id="username" value="#{user.username}" styleClass="center"></h:inputText>
 								</td>
 								<td><h:message for="username" style="color:red" /></td>
 							</tr>
+							<br/>
 							<tr>
 								<td><h:outputText value="Password: " /></td>
-								<td><h:inputSecret id="password" value="#{user.password}" />
+								<br/>
+								<td><h:inputSecret id="password" value="#{user.password}" styleClass="center" />
 								</td>
-								<td><h:message for="password" style="color:red" /></td>
+								<td><h:message for="password" style="color:red" styleClass="center"/></td>
 							</tr>
+							<br/>
 							<tr>
 								<td><h:commandButton value="Login"
-										action="#{accountController.authenticate(user)}" /></td>
+										action="#{accountController.authenticate(user)}" styleClass="button"/></td>
 							</tr>
 
 				</h:form>

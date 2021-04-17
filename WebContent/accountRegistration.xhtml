@@ -20,6 +20,7 @@
 					<h:form>
 						<tr>
 								<td><h:outputText value="Username: " /></td>
+								<br/>
 								<td><h:inputText id="username" value="#{user.username}" />
 								</td>
 								<td><h:message for="username" style="color:red" /></td>
@@ -27,6 +28,7 @@
 							<br/>
 							<tr>
 								<td><h:outputText value="Password: " /></td>
+								<br/>
 								<td><h:inputText id="password" value="#{user.password}" />
 								</td>
 								<td><h:message for="password" style="color:red" /></td>
@@ -34,6 +36,7 @@
 							<br/>
 							<tr>
 								<td><h:outputText value="First Name: " /></td>
+								<br/>
 								<td><h:inputText id="firstName" value="#{user.firstName}" />
 								</td>
 								<td><h:message for="firstName" style="color:red" /></td>
@@ -41,6 +44,7 @@
 							<br/>
 							<tr>
 								<td><h:outputText value="Last Name: " /></td>
+								<br/>
 								<td><h:inputText id="lastName" value="#{user.lastName}" />
 								</td>
 								<td><h:message for="lastName" style="color:red" /></td>
@@ -48,12 +52,14 @@
 							<br/>
 							<tr>
 								<td><h:outputText value="Email: " /></td>
+								<br/>
 								<td><h:inputText id="email" value="#{user.email}" /></td>
 								<td><h:message for="email" style="color:red" /></td>
 							</tr>
 							<br/>
 							<tr>
 								<td><h:outputText value="Birthdate: " /></td>
+								<br/>
 								<td><h:inputText id="phoneNumber"
 										value="#{user.birthdate}" /></td>
 								<td><h:message for="birthdate" style="color:red" /></td>
@@ -62,7 +68,7 @@
 							<tr>
 						
 						<td><h:commandButton value="Register"
-										action="#{accountController.register(user)}" /></td>
+										action="#{accountController.register(user)}" styleClass="button"/></td>
 					</tr></h:form>
 				</div>
 			</ui:define>
