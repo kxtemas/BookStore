@@ -122,7 +122,7 @@ public class UserDataService {
 				u1.setUsername(rs.getString("username"));
 				u1.setPassword(rs.getString("password"));
 				u1.setFirstName(rs.getString("firstname"));
-				u1.setLastName(rs.getString("password"));
+				u1.setLastName(rs.getString("lastname"));
 				u1.setEmail(rs.getString("email"));
 				u1.setBirthdate(rs.getString("birthdate"));
 				users.add(u1);

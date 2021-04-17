@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+
+	<!-- Page Head -->
+	<h:head>
+		<title>
+			<ui:insert name="title" >
+			CLC256
+			</ui:insert>
+			<h:outputStylesheet library="css" name="common-style.css" />
+		</title>
+		<style>
+	
+		.header{
+ 	padding: 5px;
+ 	text-align: center;
+ 	background: #ffd478;
+ 	color: white;
+ 	font-size: 20px;
+ 	
+ }
+ .button {
+	background-color: #006400;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 30%;
+}
+input {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  position: center;
+  background: #ffff;
+}
+
+body {
+	background: #FFF8DC;
+	text-align: center;
+
+	font-family: Arial, Helvetica, sans-serif,
+}
+form {
+	border: 3px solid #FFF8DC;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+		</style>
+	</h:head>	
+	<h:body>
+		<!-- Navigation Bar
+		<div id="navBar" align="center">
+			<ui:insert name="navBar">
+				<ui:include src="/layouts/layout_NavigationBar.xhtml" />
+			</ui:insert>
+			<br/>
+			<br/>
+		</div>-->
+	
+	
+	
+		<!-- Header Position-->
+		<div id="header" align="center">
+			<ui:insert name="header">
+				<ui:include src="/layouts/commonLoggedHeader.xhtml" />
+			</ui:insert>
+			<br/>
+			<br/>
+		</div>
+		
+		<!-- Content Position -->
+		<div id="content">
+			<ui:insert name="content" align="center">
+				<ui:include src="/layouts/commonContent.xhtml" />
+			</ui:insert>
+		</div>
+		
+		<!-- Footer Position -->
+		<div id="footer" align="center">
+			<br/>
+			<br/>
+			<ui:insert name="footer">
+				<ui:include src="/layouts/commonFooter.xhtml" />
+			</ui:insert>
+		</div>
+	</h:body> 
+</html>
